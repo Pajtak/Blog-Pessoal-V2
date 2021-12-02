@@ -1,0 +1,27 @@
+ul.tm-social {
+  list-style: none;
+  padding: 0;
+}
+ul.tm-social li {
+  display: inline;
+  padding: 5px;
+  margin: 0;
+}
+
+.fa {
+  font-size: 35pt;
+  color: white;
+}
+.text-rodape{
+  font-size: 10pt;
+}
+
+.fa-linkedin:hover{
+  color: #0e76a8;
+}
+.fa-github:hover{
+  color: black;
+}
+.fa-address-card:hover{
+  color: green;
+}
