@@ -84,12 +84,12 @@ button:hover{
 }
 
 #chk:checked ~ .form-cadastrar{
-	transform: translateY(-500px);
+	transform: translateY(-580px);
   background: #285852;
 }
 #chk:checked ~ .form-cadastrar label{
 	transform: scale(1);
 }
-#chk:checked ~ .signup label{
+#chk:checked ~ .form-login label{
 	transform: scale(.6);
 }
