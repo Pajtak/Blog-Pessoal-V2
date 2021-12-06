@@ -10,8 +10,8 @@
 
       <form>
         <label for="chk" aria-hidden="true">Entrar</label>
-        <input class ="form-control" type="email" name="email" placeholder="E-mail" required="">
-        <input class ="form-control" type="password" name="senha" placeholder="Senha" required="">
+        <input class="form-control" type="email" name="email" placeholder="E-mail" required="">
+        <input class="form-control" type="password" name="senha" placeholder="Senha" required="">
         <button>Entrar</button>
       </form>
     </div>
@@ -19,18 +19,21 @@
     <div class="form-cadastrar">
       <form>
         <label for="chk" aria-hidden="true">Cadastrar</label>
-        <input class ="form-control" type="text" name="nome" placeholder="Nome" required="">
-        <input class ="form-control" type="text" name="txt" placeholder="Usuário" required="">
-        <input class ="form-control" type="text" name="foto" placeholder="Link da sua Foto" required="">
-        <input class ="form-control" type="email" name="email" placeholder="E-mail" required="">
-        <input class ="form-control" type="password" name="senha" placeholder="Senha" required="">
-        <input class ="form-control" type="password" name="confirmSenha" placeholder="Confirmar Senha" required="">
-        <select class="form-control" name="tipo" id="tipo" >
-        <option>Selecione um tipo de Usuário:</option>
-        <option value="normal">Usuário Comum</option>
-        <option value="Admin">Administrador</option>
-      </select>
-        <button>Cadastrar</button>
+        <input [(ngModel)]='Usuario.nome' class="form-control" type="text" name="nome" placeholder="Nome" required="">
+        <input [(ngModel)]='Usuario.usuario' class="form-control" type="email" name="txt" placeholder="E-mail"
+          required="">
+        <input [(ngModel)]='Usuario.foto' class="form-control" type="text" name="foto" placeholder="Link da sua Foto"
+          required="">
+        <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" placeholder="Senha"
+          required="">
+        <input [(ngModel)]='Usuario.senha' class="form-control" type="password" name="confirmSenha"
+          placeholder="Confirmar Senha" required="">
+        <select class="form-control" name="tipo" id="tipo" (change)='tipoUsuario($event)'>
+          <option>Selecione um tipo de Usuário:</option>
+          <option value="normal">Usuário Comum</option>
+          <option value="Admin">Administrador</option>
+        </select>
+        <button (click)='cadastrar()' type="submit">Cadastrar</button>
       </form>
     </div>
   </div>

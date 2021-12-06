@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { LoginComponent } from './login/login.component';
+import { CorpoComponent } from './corpo/corpo.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,10 +17,13 @@ import { LoginComponent } from './login/login.component';
     MenuComponent,
     RodapeComponent,
     LoginComponent,
+    CorpoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
