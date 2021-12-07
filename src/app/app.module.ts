@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { LoginComponent } from './login/login.component';
-import { CorpoComponent } from './corpo/corpo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 @NgModule({
@@ -17,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     RodapeComponent,
     LoginComponent,
-    CorpoComponent,
+    InicioComponent,
+    
   ],
   imports: [
     BrowserModule,
