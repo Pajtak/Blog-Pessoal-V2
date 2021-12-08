@@ -1,0 +1,51 @@
+mat-sidenav-container{
+  height: 100%;
+}
+ mat-sidenav, mat-sidenav-content {
+   padding: 16px;
+ }
+
+ mat-sidenav {
+   background-image: linear-gradient(to top, #285852, #ffffff);
+   width: 200px;
+ }
+
+ .container-content{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0px;
+   padding: 0px;
+ }
+
+ a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent; }
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline; }
+
+    
+button {
+  border-radius: 10px;
+  background: black;
+  box-shadow: black; }
+
+button:hover {
+  outline: 1px dotted;
+  outline: 5px  
+}
+.footer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fs-28{
+  padding: 6px;
+  font-size: 28pt;
+}
+
+.fs-18{
+  font-size: 15pt;
+}

@@ -1,1 +1,82 @@
-<p>inicio works!</p>
+<mat-sidenav-container>
+  <mat-sidenav mode='over' [(opened)]='aberto'>
+    <div class="p-4 pt-5">
+      <div class="container-content">
+      <a href="#" class="img logo rounded-circle mb-5"></a>
+      <ul class="list-unstyled components mb-5">
+        <li class="active">
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+                <a href="#">Home 1</a>
+            </li>
+            <li>
+                <a href="#">Home 2</a>
+            </li>
+            <li>
+                <a href="#">Home 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+                <a href="#">Page 1</a>
+            </li>
+            <li>
+                <a href="#">Page 2</a>
+            </li>
+            <li>
+                <a href="#">Page 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Portfolio</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+      </div>
+      <div class="footer">
+       
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+          
+      </div>
+
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button type="button" id="sidebarCollapse" class="btn btn-dark" (click)="aberto=!aberto">
+      <i class="fa fa-bars"></i>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-md-6">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-6">
+            <h1 class="fs-28">Seja Bem Vindo(a) ao meu Blog de História</h1>
+            <h5 class="fs-18">Sinta-se a vontade para discutir e postar sobre o tema que te interessar!</h5>
+          </div>
+        
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-6">
+                <button class="btn btn-dark mr-2">Nova Postagem</button>
+                <a class="btn btn-dark" href="">Ver Postagens</a>
+          </div>
+        </div>
+       </div>
+       <div class="col-md-6"></div>
+     </div>
+   </div>
+    
+ 
+  </mat-sidenav-content>
+</mat-sidenav-container>
