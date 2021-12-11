@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
     } else {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
-      
+
         alert('Usuário Cadastrado com sucesso!')
       })
     }
@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
   entrar(){
     this.authService.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin)=>{
       this.usuarioLogin = resp
-      
+
       environment.token = this.usuarioLogin.token
       environment.nome = this.usuarioLogin.nome
       environment.id = this.usuarioLogin.idUsuario
@@ -66,9 +66,9 @@ export class LoginComponent implements OnInit {
     }, erro => {
       if(erro.status == 500){
         alert('Usuário ou senha estão incorretos')
-      }    
+      }
     }
-      
+
     )
 
   }

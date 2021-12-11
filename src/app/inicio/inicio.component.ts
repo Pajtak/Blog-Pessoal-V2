@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -10,12 +10,13 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class InicioComponent implements OnInit {
 
-  aberto = false
+  nome = environment.nome
+  foto = environment.foto
   constructor(
     private router: Router
   ) { }
 
-  
+
   ngOnInit() {
 
     if(environment.token == ''){
@@ -23,5 +24,11 @@ export class InicioComponent implements OnInit {
       this.router.navigate(['/login'])
     }
   }
-
+  sair(){
+    this.router.navigate(['/login'])
+    environment.token = ''
+    environment.nome = ''
+    environment.foto = ''
+    environment.id = 0
+  }
 }

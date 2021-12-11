@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
 
   nome = environment.nome
   foto = environment.foto
-  
+  aberto = false
   constructor(
     private router: Router
   ) { }
