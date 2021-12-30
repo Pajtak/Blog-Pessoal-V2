@@ -1,0 +1,176 @@
+<div class="row">
+  <div class="col-md-12">
+    <mat-toolbar class="mat-elevation-z8">
+
+
+      <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+          menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+          close
+        </mat-icon>
+      </button>
+      <div class="col-md-12 d-flex justify-content-end p-5">
+        <div class="row">
+          <div class="col-md-6 d-flex display-inline">
+            <button mat-button class="nav-button1">
+              <mat-icon>home</mat-icon>
+              <span>Início</span>
+            </button>
+            <button mat-button class="nav-button2">
+              <mat-icon>person</mat-icon>
+              <span>Perfil</span>
+            </button>
+            <button mat-button class="nav-button3">
+              <mat-icon>info</mat-icon>
+              <span>Postagens</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </mat-toolbar>
+  </div>
+</div>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+    <img class="avatar mat-elevation-z8" src="{{foto}}" />
+
+    <h4 class="name">{{nome}}</h4>
+
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon>home</mat-icon>
+      <span>Início</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>person</mat-icon>
+      <span>Perfil</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>info</mat-icon>
+      <span>Postagens</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button (click)='sair()' mat-button class="menu-button">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Sair</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <div class="container-fluid">
+        <div class="row d-flex align-items-center">
+          <div class="col-md-6">
+            <div class="row d-flex justify-content-center align-items-center">
+              <div class="col-md-7">
+                <h1 class="fs-54">Bem-vindo(a)
+                  ao meu blog
+                  de História</h1>
+                <h5 class="fs-18">Sinta-se a vontade para discutir e postar sobre o tema que te interessar!</h5>
+              </div>
+
+            </div>
+            <div class="row d-flex justify-content-center mt-3 mb-5">
+              <div class="col-md-6">
+                <button class="btn btn-dark mr-2" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+                <a class="btn btn-dark" href="#postagens">Ver Postagens</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 d-flex justify-content-center">
+            <img src="../../assets/img/Bibliophile-pana.png" alt="" width="500px" height="500px">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="demo mb-5 mt-5 ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mat-elevation-z8 ">
+            <div class="tab justify-content-center" role="tabpanel">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li role="presentation" class="active"><a href="#todasPostagens" aria-controls="todasPostagens" role="tab"
+                    data-toggle="tab"><i class="fa fa-globe"></i><span>Todas as Postagens</span></a></li>
+                <li role="presentation"><a href="#minhasPostagens" aria-controls="minhasPostagens" role="tab" data-toggle="tab"><i
+                      class="fa fa-user"></i><span>Minhas Postagens</span></a></li>
+                <li role="presentation"><a href="#postagensTema" aria-controls="messages" role="tab" data-toggle="tab"><i
+                      class="fa fa-folder-o"></i><span>Postagens por Tema</span></a></li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content tabs">
+                <div role="tabpanel" class="tab-pane fade in active" id="todasPostagens">
+                  <h3>Todas as Postagens</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel,
+                    malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue,
+                    placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra
+                    dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci
+                    semper, rhoncus ligula. Vivamus scelerisque.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="minhasPostagens">
+                  <h3>Minhas Postagens</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel,
+                    malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue,
+                    placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra
+                    dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci
+                    semper, rhoncus ligula. Vivamus scelerisque.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="postagensTema">
+                  <h3>Postagens por Tema</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel,
+                    malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue,
+                    placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra
+                    dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci
+                    semper, rhoncus ligula. Vivamus scelerisque.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- Modal -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-center">
+        <h2 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input type="text" class="form-control" id="titulo" placeholder="Digite o Título">
+        </div>
+        <div class="form-group">
+        <textarea name="texto" class="form-control" id="texto" cols="" rows="3" placeholder="Digite sua postagem"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'> cadastre um novo</a>:</label>
+          <select name="tema" id="tema" class="form-control">
+            <option value="">Tema</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
