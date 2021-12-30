@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.main{
+  background-color: white;
+}
+mat-toolbar{
+  background-image: linear-gradient(to right, #122c29, #285852);
+  color: white;
+}
+
+.nav-button1{
+  padding-right: 10px;
+}
+mat-sidenav-container{
+  height: calc(100vh - 65px);
+}
+ mat-sidenav, mat-sidenav-content {
+   background: white;
+   padding: 0px;
+ }
+
+ mat-sidenav {
+   background-image: linear-gradient(to top, #285852, #122c29);
+   margin: 16px;
+   width: 200px;
+   border-right: none;
+   color: white;
+   border-radius: 10px;
+   padding: 16px;
+   text-align: center;
+ }
+
+ .content {
+  background-image: linear-gradient(to top, #285852, #122c29);
+  margin: 5px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+ }
+
+ .container-content{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0px;
+   padding: 0px;
+ }
+
+ .menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+ }
+
+ .menu-button:hover{
+   background-color: white;
+   color: #122c29;
+ }
+
+
+
+
+
+.avatar {
+  margin-top: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.row-main{
+
+
+}
+.btn {
+  background-color: #122c29;
+  color: white
+}
+
+.btn:hover {
+  background-color: white;
+  color: #122c29;
+}
+.cadastro-button {
+  background-color: #122c29;
+  color: white;
+}
+
+.cadastro-button:hover {
+  background-color: white;
+  color: #122c29;
+}
+
+.fs-54{
+  font-size: 54pt;
+}
+
+.fs-18{
+  font-size: 18pt;
+}
+.row-sec {
+  background-color: white;
+}

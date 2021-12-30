@@ -1,0 +1,40 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="login.component.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<div class="main-container">
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <div class="form-login">
+
+      <form>
+        <label for="chk" aria-hidden="true">Entrar</label>
+        <input [(ngModel)]='usuarioLogin.usuario' class="form-control" type="email" name="email" placeholder="E-mail" required="">
+        <input [(ngModel)]='usuarioLogin.senha' class="form-control" type="password" name="senha" placeholder="Senha" required="">
+        <button type='submit' (click)='entrar()'>Entrar</button>
+      </form>
+    </div>
+
+    <div class="form-cadastrar">
+      <form>
+        <label for="chk" aria-hidden="true">Cadastrar</label>
+        <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" placeholder="Nome" required="">
+        <input [(ngModel)]='usuario.usuario' class="form-control" type="email" name="txt" placeholder="E-mail"
+          required="">
+        <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="foto" placeholder="Link da sua Foto"
+          required="">
+        <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" placeholder="Senha"
+          required="">
+        <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmSenha"
+          placeholder="Confirmar Senha" required="">
+        <select class="form-control" name="tipo" id="tipo" (change)='tipoUsuario($event)'>
+          <option>Selecione um tipo de Usuário:</option>
+          <option value="normal">Usuário Comum</option>
+          <option value="Admin">Administrador</option>
+        </select>
+        <button (click)='cadastrar()' type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</div>
